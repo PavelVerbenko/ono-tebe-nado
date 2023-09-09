@@ -1,3 +1,3 @@
 # ono-tebe-nado
 Проект "Оно тебе надо"
-Всё получится
+https://github.com/PavelVerbenko/ono-tebe-nado.git
