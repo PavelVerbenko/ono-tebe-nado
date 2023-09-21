@@ -1,20 +1,13 @@
-/* Решил так будет лучше, при наведение на текст появляется подчеркивание */
-
-/* Там написано не больше 10% от макета, я думаю, я сделал свою работу отлично, для первого проекта, пропустите на 2 спринт, буду благодарен */
-
 a {
   text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
 }
 
 /* Раскинул на весь экран макет задал отступы*/
 .header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding: 99px 35px 103px 50px;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 92px 34px 95px 51px;
   width: 100%;
   height: 100%;
 }
@@ -22,48 +15,50 @@ a:hover {
 /* Выровнил список меню и задал отступы между ними */
 .header__menu-list {
   display: flex;
-  justify-content: space-between;
-  gap: 33px;
-  align-items: center;
+  gap: 32px;
   width: auto;
-  white-space: nowrap;
   padding-bottom: 6px;
 }
 
 /* Использовал дисплей, чтобы выровнить по центру меню и адрес*/
 .header__menu {
   display: flex;
-  padding: 9px 0px 0px 0px;
+  justify-content: space-between;
+}
+
+.header__menu-item {
+  padding-top: 10px;
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* Меняет на круглые точечки*/
-.header__menu-item {
+li{
   list-style-type: circle;
 }
 
 /* убрали у первого убрали стобец */
-.header__menu-item:first-child {
+li:first-child {
   list-style: none;
 }
 
 /* уменьшил лого в центре */
 .header_logo {
-  position: absolute;
   width: 138px;
   height: 105px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-45%, -53%);
 }
 
 .address {
   display: flex;
   flex-direction: column;
+  justify-self: end;
   line-height: 23px;
   max-width: 240px;
   font-style: normal;
   color: #000;
-  font-family: Raleway;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -72,7 +67,7 @@ a:hover {
 /* Выровнил изображение*/
 .content-section {
   position: relative;
-  width: 100%;
+  min-width: 1440px;
   min-height: 757px;
   background-image: url(../images/cover.jpg);
   background-size: cover;
@@ -82,24 +77,21 @@ a:hover {
 
 .content-wrapper {
   position: relative;
-  inset: 0;
+  text-transform: uppercase;
 }
+
 
 .aligned__text {
   line-height: 115px;
-  letter-spacing: 0.3em;
 }
 
 .aligned__text-center {
   text-align: center;
-  letter-spacing: 0.3em;
-  padding-top: 9px;
+  padding-top: 10px;
 }
 
 .aligned__text-right {
   text-align: right;
-  letter-spacing: 0.6em;
-  padding-bottom: 121px;
   padding-top: 5px;
 }
 
@@ -124,6 +116,7 @@ a:hover {
 
 /* Задал занчение заголовку */
 .cover_title {
+  letter-spacing: 0.3em;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -131,7 +124,7 @@ a:hover {
   font-size: 100px;
   font-style: normal;
   font-weight: 700;
-  padding: 165px 35px 0px 50px;
+  padding: 165px 50px 116px 50px;
 }
 
 /* Текст с кнопкой выровнил */
@@ -139,23 +132,20 @@ a:hover {
   display: flex;
   justify-content: end;
   align-items: center;
-  padding-right: 34px;
-  padding-top: 4px;
+  padding-right: 50px;
+  padding-top: 11px;
 }
 
 /* Задал всё для текста */
 .cover__description-text {
-  max-width: 740px;
   width: 100%;
   color: #fff;
-  text-align: center;
+  text-align: end;
+  padding-right: 80px;
   font-size: 22px;
   font-weight: 400;
   line-height: 28px; /* 127.273% */
-  padding-right: 20px;
-  word-spacing: 19px;
-  padding-right: 72px;
-  padding-left: 18px;
+  word-spacing: 18px;
 }
 
 /* Тут для кнопки */
@@ -166,7 +156,10 @@ a:hover {
   cursor: pointer;
   border: 1px solid currentColor;
   background-color: transparent;
-  width: 257px;
+  line-height: normal;
+  text-transform: uppercase;
+  font-style: normal;
+  width: 315px;
   height: 52px;
   font-size: 22px;
 }
@@ -174,18 +167,38 @@ a:hover {
 /* тут для заголовка секкции карточки */
 .lots {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.lots__card-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  /* padding: 0px 50px 0px 50px; */
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
 /* Для заголовка секции карточки */
 .lots__heading {
+  padding: 180px 0px 27px 40px;
   font-style: normal;
   font-size: 40px;
   font-weight: 700;
-  padding: 180px 0px 27px 90px;
+  text-transform: uppercase;
 }
 
-.card-link:hover {
-  text-decoration: none;
+.card-link {
+  display: flex;
+  flex-grow: 1;
+  width: 430px;
+  min-height: 450px;
 }
 
 /* Для заголовков карточек */
@@ -210,42 +223,29 @@ a:hover {
   padding: 0px 40px 50px;
 }
 
-/* Карточки растянул их и между ними сделал отсупы */
-.lots__card-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  gap: 25px;
-}
-
 /* Карточки  добавил фон, задал ширинуи высоту каждому */
 .card_lots {
   display: flex;
-  flex-direction: column;
   position: relative;
-  width: 430px;
-  min-height: 450px;
+  
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin-left: 10px;
-}
-
-.card-link {
-  padding: 0px 4px;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
+  background-position: center;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
+  background-position: center;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
+  background-position: center;
 }
 
 .card {
@@ -268,13 +268,18 @@ a:hover {
 
 /* Так же как и везде при наведение происходит подчеркивание */
 .lots__look-more-link {
-  padding: 29px 10px 0px 90px;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding: 30px 0px 0px 40px;
 }
 
+
+.added__underscore {
+  border-bottom: 1px solid #000000;
+  width: 133px;
+}
 /* Задал ширину и высоту секции */
 .about {
   width: 100%;
@@ -283,7 +288,7 @@ a:hover {
   gap: 125px;
   padding-top: 180px;
   padding-left: 140px;
-  padding-bottom: 155px;
+  padding-bottom: 180px;
 }
 
 /* выровнил по центру */
@@ -308,7 +313,7 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 240px;
+  min-width: 240px;
   height: 240px;
   background-color: black;
   border-radius: 50%;
@@ -330,7 +335,12 @@ a:hover {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
+  
+}
+
+.about__text:last-child {
+ padding: 0; 
 }
 
 /* Подвал */
@@ -338,7 +348,11 @@ a:hover {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0px 35px 90px 50px;
+  padding: 0px 37px 90px 50px;
+}
+
+.removes__the-circle {
+  list-style-type: none;
 }
 
 .footer-content {
@@ -346,14 +360,13 @@ a:hover {
   flex-direction: column;
   line-height: 23px;
   color: #000;
-  font-family: Raleway;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
 }
 
 .footer__menu {
-  padding-left: 20px;
+  padding-left: 10px;
   text-align: center;
   color: #000;
   font-size: 18px;
@@ -368,7 +381,7 @@ a:hover {
 /* Иконки */
 .footer__social-list {
   display: flex;
-  padding-left: 17px;
+  padding-left: 10px;
   gap: 45px;
 }
 
