@@ -31,15 +31,10 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-/* Меняет на круглые точечки*/
-.underline {
   list-style-type: circle;
 }
 
-/* убрали у первого убрали стобец */
-.underline:first-child {
+.header__menu-item:first-child {
   list-style: none;
 }
 
@@ -76,19 +71,6 @@ a {
   text-transform: uppercase;
 }
 
-.aligned__text {
-  line-height: 115px;
-  margin-bottom: 2px;
-}
-
-.aligned__text-center {
-  text-align: center;
-}
-
-.aligned__text-right {
-  text-align: right;
-}
-
 .letter__spacing {
   letter-spacing: 0.6em;
 }
@@ -108,13 +90,30 @@ a {
   background: #000;
 }
 
+
+.aligned__text {
+  line-height: 115px;
+}
+
+.aligned__text-center {
+  text-align: center;
+  line-height: 100%;
+  
+}
+
+.aligned__text-right {
+  text-align: right;
+  line-height: 100%;
+  
+}
+
 /* Задал занчение заголовку */
 .cover_title {
   letter-spacing: 0.3em;
   width: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: 7px;
+  gap: 20px;
   color: #fff;
   font-size: 100px;
   font-style: normal;
@@ -128,7 +127,7 @@ a {
   justify-content: end;
   align-items: center;
   padding-right: 50px;
-  padding-top: 11px;
+  padding-top: 20px;
   padding-bottom: 50px;
 }
 
