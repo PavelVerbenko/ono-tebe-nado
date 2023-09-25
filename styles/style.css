@@ -90,7 +90,6 @@ a {
   background: #000;
 }
 
-
 .aligned__text {
   line-height: 115px;
 }
@@ -98,13 +97,11 @@ a {
 .aligned__text-center {
   text-align: center;
   line-height: 100%;
-  
 }
 
 .aligned__text-right {
   text-align: right;
   line-height: 100%;
-  
 }
 
 /* Задал занчение заголовку */
