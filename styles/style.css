@@ -7,7 +7,7 @@ a {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 51px 95px 49px;
+  padding: 92px 50px 95px 50px;
 }
 
 /* Выровнил список меню и задал отступы между ними */
@@ -34,7 +34,7 @@ a {
   list-style-type: circle;
 }
 
-.header__menu-item:first-child {
+.header__menu-item_no-bullit:first-child {
   list-style: none;
 }
 
@@ -59,7 +59,6 @@ a {
 
 .content-section {
   position: relative;
-  min-width: 1440px;
   background-image: url(../images/cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
